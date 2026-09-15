@@ -34,7 +34,7 @@ function StringReverse() {
       <h1>String Reverse</h1>
       <p className="intro">Various JavaScript algorithms to reverse a string value. Type anywhere. <code className="user-string">Your string</code> and the <code className="reversed-string">reversed string</code> will appear below. Reload the page to restart.</p>
       <h2>Algorithm 01</h2>
-      <p>Reverse the string using array methods:</p>
+      <p>Reverse the string using the spread operator and array methods:</p>
       <pre>
         <code>[...string].reverse().join('')</code>
       </pre>
