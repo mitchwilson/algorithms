@@ -51,7 +51,7 @@ function StringReverse() {
       </p>
       <br></br>
       <h2>Algorithm 02</h2>
-      <p>Reverse the string using iteration and string concatenation:</p>
+      <p>Reverse the string using a <code>for ... of</code> loop and string concatenation:</p>
       <pre>
         <code>{`let newString = ''
 for (const character of string) {
@@ -60,7 +60,7 @@ for (const character of string) {
       </pre>
       <ol>
         <li>Create a new empty <code>newString</code> variable.</li>
-        <li>Interate over each <code>character</code> in the <code>string</code>.</li>
+        <li>Iterate over each <code>character</code> in the <code>string</code>.</li>
         <li>Prepend each <code>character</code> to the beginning of the <code>newString</code>.</li>
       </ol>
       <p>
