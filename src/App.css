@@ -24,3 +24,12 @@ section {
 label {
   font-style: italic;
 }
+
+p.intro {
+  margin-bottom: 1rem;
+}
+
+code {
+  color: #fff;
+  font-family: monospace;
+}

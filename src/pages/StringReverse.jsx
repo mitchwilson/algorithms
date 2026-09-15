@@ -2,46 +2,49 @@ import { useEffect, useState } from 'react'
 import '../App.css'
 
 function StringReverse() {
-  const [reversedString, setReversedString] = useState('')
-    const [string, setString] = useState('')
-  
-    function handleKeypress(event) {
-      setString(str=>str + event.key)
+  const [reversedStringMethod1, setReversedStringMethod1] = useState('')
+  const [reversedStringMethod2, setReversedStringMethod2] = useState('')
+  const [string, setString] = useState('')
+
+  function handleKeypress(event) {
+    setString(str=>str + event.key)
+  }
+
+  useEffect(()=>{
+    window.addEventListener('keypress', handleKeypress)
+
+    return ()=>{
+      window.removeEventListener('keypress', handleKeypress)
     }
-  
-    useEffect(()=>{
-      window.addEventListener('keypress', handleKeypress)
-  
-      return ()=>{
-        window.removeEventListener('keypress', handleKeypress)
-      }
-    }, [])
-  
-    useEffect(()=>{
-      setReversedString(str=>[...string].reverse().join(''))
-    }, [string])
-  
-    return (
-      <section>
-        <h1>String Reverse</h1>
-        <p>Type anywhere. Your string and the reversed string will appear below. Reload the page to restart.</p>
-        <section>
-          <p>
-            <label>Your string</label>: <code>{ string }</code>
-          </p>
+  }, [])
+
+  useEffect(()=>{
+    setReversedStringMethod1(str=>[...string].reverse().join(''))
+    setReversedStringMethod2(str=>{
+      return str
+    })
+  }, [string])
+
+  return (
+    <section>
+      <h1>String Reverse</h1>
+      <p className="intro">Various JavaScript algorithms to reverse a string value. Type anywhere. Your string and the reversed string will appear below. Reload the page to restart.</p>
+      <h2>Algorithm 01</h2>
+      <p>Using this code <code>[...string].reverse().join('')</code></p>
+      <ol>
+        <li>Convert the string to an array</li>
+        <li>Use the <code className="alpha">reverse</code> method to reverse the array</li>
+        <li>Then use the <code>join</code> method to convert the array back into a string</li>
+      </ol>
         <p>
-          <label>Reversed str</label>: <code>{ reversedString }</code>
+          <label>Your string</label>: <code className="alpha">{ string }</code>
         </p>
-        </section>
-        <h2>Method</h2>
-        <p>Using this code <code>[...string].reverse().join('')</code></p>
-        <ol>
-          <li>Convert the string to an array</li>
-          <li>Use the <code>reverse</code> method to reverse the array</li>
-          <li>Then use the <code>join</code> method to convert the array back into a string</li>
-        </ol>
-      </section>
-    )
+        <p>
+          <label>Reversed str</label>: <code>{ reversedStringMethod1 }</code>
+        </p>
+    </section>
+    
+  )
 }
 
 export default StringReverse
