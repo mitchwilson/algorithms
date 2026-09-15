@@ -51,7 +51,7 @@ function StringReverse() {
       </p>
       <br></br>
       <h2>Algorithm 02</h2>
-      <p>Reverse the string using an interable and string concatenation:</p>
+      <p>Reverse the string using iteration and string concatenation:</p>
       <pre>
         <code>{`let newString = ''
 for (const character of string) {
