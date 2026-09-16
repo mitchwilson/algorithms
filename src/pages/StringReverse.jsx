@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 import '../App.css'
 
 function StringReverse() {
-  const [reversedStringMethod1, setReversedStringMethod1] = useState('')
-  const [reversedStringMethod2, setReversedStringMethod2] = useState('')
   const [string, setString] = useState('')
 
   function handleKeypress(event) {
@@ -18,16 +16,11 @@ function StringReverse() {
     }
   }, [])
 
-  useEffect(()=>{
-    setReversedStringMethod1(str=>[...string].reverse().join(''))
-    setReversedStringMethod2(str=>{
-      let newString = ""
-      for(const character of string) {
-        newString = character + newString
-      }
-      return newString
-    })
-  }, [string])
+  const reversedStringMethod1 = [...string].reverse().join('')
+  let reversedStringMethod2 = ""
+  for(const character of string) {
+    reversedStringMethod2 = character + reversedStringMethod2
+  }
 
   return (
     <section>
