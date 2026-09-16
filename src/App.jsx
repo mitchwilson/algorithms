@@ -1,5 +1,6 @@
 import './App.css'
 import Home from './pages/Home.jsx'
+import IntegerReverse from './pages/IntegerReverse.jsx'
 import StringReverse from './pages/StringReverse.jsx'
 
 function Navigation() {
@@ -16,7 +17,23 @@ function App() {
   return (
     <>
       <Navigation />
-      {window.location.pathname === '/stringreverse' ? <StringReverse /> : <Home />}
+      {
+        ( ()=>{
+          let page
+          switch(window.location.pathname) {
+            case '/integerreverse':
+              page = <IntegerReverse />
+              break;
+            case '/stringreverse':
+              page = <StringReverse />
+              break;
+            case '/':
+              page = <Home />
+              break;
+          }
+          return page
+        })()
+      }
     </>
   )
 }
