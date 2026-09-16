@@ -35,10 +35,7 @@ function IntegerReverse() {
   return (
     <section>
       <h1>Integer Reverse</h1>
-      <p className="intro">Various JavaScript algorithms to reverse an integer value. Type anywhere. <code className="user-string">Your integer</code> and the <code className="reversed-string">reversed integer</code> will appear below. Reload the page to restart.</p>
-      
-      <br></br>
-      
+      <p className="intro">Various JavaScript algorithms to reverse an integer value. Type anywhere. <code className="user-string">Your integer</code> and the <code className="reversed-string">reversed integer</code> will appear below. Reload the page to restart.</p>    
       <h2>Algorithm 01</h2>
       <p>Reverse the integer by first converting it to a string, then by using a common reverse string algorithm. Once reversed, convert back to a number</p>
       <pre>
