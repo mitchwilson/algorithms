@@ -6,6 +6,7 @@ function Home() {
       <p>Small, focused exercises on JavaScript algorithms.</p>
       <ul>
         <li><a className="route-link" href="/integerreverse">Integer Reverse</a></li>
+        <li><a className="route-link" href="/palindrome">Palindrome</a></li>
         <li><a className="route-link" href="/stringreverse">String Reverse</a></li>
       </ul>
     </section>

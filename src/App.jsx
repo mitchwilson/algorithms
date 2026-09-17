@@ -1,6 +1,7 @@
 import './App.css'
 import Home from './pages/Home.jsx'
 import IntegerReverse from './pages/IntegerReverse.jsx'
+import Palindrome from './pages/palindrome.jsx'
 import StringReverse from './pages/StringReverse.jsx'
 
 function Navigation() {
@@ -23,6 +24,9 @@ function App() {
           switch(window.location.pathname) {
             case '/integerreverse':
               page = <IntegerReverse />
+              break;
+            case '/palindrome':
+              page = <Palindrome />
               break;
             case '/stringreverse':
               page = <StringReverse />
