@@ -28,7 +28,7 @@ function IntegerReverse() {
 
   while (remainingInteger > 0) {
     const lastDigit = remainingInteger % 10
-    reversedMethod2 = reversedMethod2 * 10 + lastDigit
+    reversedMethod2 =  (reversedMethod2 * 10) + lastDigit
     remainingInteger = Math.floor(remainingInteger / 10)
   }
 
@@ -68,7 +68,7 @@ while (remainingInteger > 0) {
 }`}</code>
       </pre>
       <ol>
-        <li>Use the remainder operator to get the last digit.</li>
+        <li>Use the modulo operator to get the last digit.</li>
         <li>Append that digit to the reversed integer.</li>
         <li>Use <code>Math.floor</code> to remove the last digit.</li>
       </ol>
