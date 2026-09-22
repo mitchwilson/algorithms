@@ -8,9 +8,26 @@ function Palindrome() {
     setString(str=>str + event.key)
   }
 
-  function isPalindrome(word) {
-    if(word === "") return ""
+  function isPalindromeMethod1(word) {
+    if(word === "") return false
     return word === [...word].reverse().join('')
+  }
+
+  function isPalindromeMethod2(word) {
+    if(word === "") return false
+
+    let left = 0
+    let right = word.length - 1
+
+    while(left < right) {
+      if (word[left] !== word[right]) {
+        return false
+      }
+      left += 1
+      right -= 1
+    }
+
+    return true
   }
 
   useEffect(()=>{
@@ -39,7 +56,37 @@ function Palindrome() {
         <label>Your word</label>: <code className="user-string">{ string }</code>
       </p>
       <p>
-        <label>Is palindrome?</label>: <code className="reversed-string">{ String(isPalindrome(string)) }</code>
+        <label>Is palindrome?</label>: <code className="reversed-string">{ String(isPalindromeMethod1(string)) }</code>
+      </p>
+      <br></br>
+      <h2>Algorithm 02</h2>
+      <p>Using the strict inequality operator <code>{`!==`}</code>, do a boolean comparison of the first and last character of the string, then the second and second to last, etc.</p>
+      <pre>
+        <code>{`
+let left = 0
+let right = word.length - 1
+
+while(left < right) {
+  if (word[left] !== word[right]) {
+    return false
+  }
+  left += 1
+  right -= 1
+}
+
+return true
+        `}</code>
+      </pre>
+      <ol>
+        <li>Reverse the word using a common string reversal algorithm.</li>
+        <li>Use a boolean comparison to compare the original word to the reversed word.</li>
+        <li>Return the result of the boolean comparison.</li>
+      </ol>
+      <p>
+        <label>Your word</label>: <code className="user-string">{ string }</code>
+      </p>
+      <p>
+        <label>Is palindrome?</label>: <code className="reversed-string">{ String(isPalindromeMethod2(string)) }</code>
       </p>
     </section>
   )
