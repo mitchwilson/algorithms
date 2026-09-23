@@ -2,6 +2,7 @@ import './App.css'
 import BubbleSort from './pages/BubbleSort.jsx'
 import Home from './pages/Home.jsx'
 import IntegerReverse from './pages/IntegerReverse.jsx'
+import MaxCharacter from './pages/MaxCharacter.jsx'
 import Palindrome from './pages/palindrome.jsx'
 import StringReverse from './pages/StringReverse.jsx'
 
@@ -26,8 +27,14 @@ function App() {
             case '/bubblesort':
               page = <BubbleSort />
               break;
+            // case '/debounce':
+            //   page = <Debounce />
+            //   break;
             case '/integerreverse':
               page = <IntegerReverse />
+              break;
+            case '/maxcharacter':
+              page = <MaxCharacter />
               break;
             case '/palindrome':
               page = <Palindrome />
@@ -35,6 +42,9 @@ function App() {
             case '/stringreverse':
               page = <StringReverse />
               break;
+            // case '/throttle':
+            //   page = <Throttle />
+            //   break;
             case '/':
               page = <Home />
               break;
