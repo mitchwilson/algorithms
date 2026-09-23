@@ -1,4 +1,5 @@
 import './App.css'
+import BubbleSort from './pages/BubbleSort.jsx'
 import Home from './pages/Home.jsx'
 import IntegerReverse from './pages/IntegerReverse.jsx'
 import Palindrome from './pages/palindrome.jsx'
@@ -22,6 +23,9 @@ function App() {
         ( ()=>{
           let page
           switch(window.location.pathname) {
+            case '/bubblesort':
+              page = <BubbleSort />
+              break;
             case '/integerreverse':
               page = <IntegerReverse />
               break;
