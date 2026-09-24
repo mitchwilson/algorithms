@@ -1,5 +1,6 @@
 import './App.css'
 import BubbleSort from './pages/BubbleSort.jsx'
+import Debounce from './pages/Debounce.jsx'
 import Home from './pages/Home.jsx'
 import IntegerReverse from './pages/IntegerReverse.jsx'
 import MaxCharacter from './pages/MaxCharacter.jsx'
@@ -27,9 +28,9 @@ function App() {
             case '/bubblesort':
               page = <BubbleSort />
               break;
-            // case '/debounce':
-            //   page = <Debounce />
-            //   break;
+            case '/debounce':
+              page = <Debounce />
+              break;
             case '/integerreverse':
               page = <IntegerReverse />
               break;
